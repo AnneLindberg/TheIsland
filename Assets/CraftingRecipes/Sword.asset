@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e48cc01151bbc10459753ae476dfd581, type: 3}
+  m_Name: Sword
+  m_EditorClassIdentifier: 
+  itemToCraft: {fileID: 11400000, guid: db4d6cbff9e788b49a55a0c6331f5a14, type: 2}
+  cost:
+  - item: {fileID: 11400000, guid: f8fa1ab124fd1ce40bb4242e30f372d7, type: 2}
+    quantity: 1
+  - item: {fileID: 11400000, guid: 22779b5c439f38143868ddc59b668f09, type: 2}
+    quantity: 3

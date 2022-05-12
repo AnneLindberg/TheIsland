@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df16d9e5f28a86244aaab0c6c37a9516, type: 3}
+  m_Name: Shelter
+  m_EditorClassIdentifier: 
+  displayName: Shelter
+  icon: {fileID: 21300000, guid: 8ab2acb788b75524e9e7826c09c387f1, type: 3}
+  spawnPrefab: {fileID: 7971014459809845826, guid: 44ed0f804cbf31c43a70dbec70e674ba, type: 3}
+  previewPrefab: {fileID: 568067487574893753, guid: a03cf7ef8033fb04687893c5e378cce1, type: 3}
+  cost:
+  - item: {fileID: 11400000, guid: f8fa1ab124fd1ce40bb4242e30f372d7, type: 2}
+    quantity: 4
+  - item: {fileID: 11400000, guid: 22779b5c439f38143868ddc59b668f09, type: 2}
+    quantity: 2
