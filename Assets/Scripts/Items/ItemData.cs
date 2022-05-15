@@ -20,6 +20,8 @@ public enum ConsumableType
 [CreateAssetMenu(fileName = "Item", menuName = "New Item")]
 public class ItemData : ScriptableObject
 {
+    public string id; 
+
     [Header("Info")]
     public string displayName;
     public string description;

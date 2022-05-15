@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 public class Campfire : Building, IInteractable
 {
     public GameObject particle;
@@ -11,12 +12,27 @@ public class Campfire : Building, IInteractable
     [Header("Damage")]
     public int damage;
     public float damageRate;
+
     private List<IDamagable> thingsToDamage = new List<IDamagable>();
 
     void Start()
     {
         lightStartPos = light.transform.localPosition;
         StartCoroutine(DealDamage());
+    }
+
+    IEnumerator DealDamage()
+    {
+        while (true)
+        {
+            if (isOn)
+            {
+                for (int x = 0; x < thingsToDamage.Count; x++)
+                    thingsToDamage[x].TakePhysicalDamage(damage);
+            }
+
+            yield return new WaitForSeconds(damageRate);
+        }
     }
 
     public string GetInteractPrompt()
@@ -32,14 +48,14 @@ public class Campfire : Building, IInteractable
         light.SetActive(isOn);
     }
 
-    // if the fire is on, move the light a bit to make it flicker with Perlin Noise. 
-    //https://docs.unity3d.com/ScriptReference/Mathf.PerlinNoise.html
     void Update()
     {
+        // if the fire is one, move the light a bit to make it flicker
         if (isOn)
         {
             float x = Mathf.PerlinNoise(Time.time * 3.0f, 0.0f) / 5.0f;
             float z = Mathf.PerlinNoise(0.0f, Time.time * 3.0f) / 5.0f;
+
             light.transform.localPosition = lightStartPos + new Vector3(x, 0.0f, z);
         }
     }
@@ -56,17 +72,16 @@ public class Campfire : Building, IInteractable
             thingsToDamage.Remove(other.gameObject.GetComponent<IDamagable>());
     }
 
-    IEnumerator DealDamage()
+    public override string GetCustomProperties()
     {
-        while (true)
-        {
-            if (isOn)
-            {
-                for (int x = 0; x < thingsToDamage.Count; x++)
-                    thingsToDamage[x].TakePhysicalDamage(damage);
-            }
-            yield return new WaitForSeconds(damageRate);
-        }
+        return isOn.ToString();
     }
 
+    public override void ReceiveCustomProperties(string props)
+    {
+        isOn = props == "True" ? true : false;
+
+        particle.SetActive(isOn);
+        light.SetActive(isOn);
+    }
 }

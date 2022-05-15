@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CraftingTable : MonoBehaviour, IInteractable
+public class CraftingTable : Building, IInteractable
 {
     private CraftingWindow craftingWindow;
     private PlayerController player;

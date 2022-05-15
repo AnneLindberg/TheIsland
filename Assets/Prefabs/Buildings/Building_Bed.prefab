@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c392119df82cb7459286e746d914132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 8ddd73c2ec9e13f48b9c0b6be7eedb17, type: 2}
   wakeUpTime: 0.3
   startCanSleepTime: 0.75
   endCanSleepTime: 0.25

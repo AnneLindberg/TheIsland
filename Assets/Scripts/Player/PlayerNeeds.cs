@@ -25,7 +25,7 @@ public class PlayerNeeds : MonoBehaviour, IDamagable
 
     void Start()
     {
-        // set the start values
+        // set start values
         health.curValue = health.startValue;
         hunger.curValue = hunger.startValue;
         thirst.curValue = thirst.startValue;
