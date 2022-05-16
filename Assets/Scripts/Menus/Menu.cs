@@ -10,6 +10,8 @@ public class Menu : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         continueButton.interactable = PlayerPrefs.HasKey("Save");
     }
 

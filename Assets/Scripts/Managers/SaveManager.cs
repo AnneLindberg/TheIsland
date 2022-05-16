@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class SaveManager : MonoBehaviour
 {
@@ -23,8 +24,11 @@ public class SaveManager : MonoBehaviour
         if (Keyboard.current.nKey.wasPressedThisFrame)
             Save();
 
+        if (Keyboard.current.lKey.wasPressedThisFrame)
+            Load();
+
         if (Keyboard.current.mKey.wasPressedThisFrame)
-           Load();
+            SceneManager.LoadScene("Menu");
     }
 
     void Save()

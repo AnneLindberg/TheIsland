@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class PlayerNeeds : MonoBehaviour, IDamagable
 {
@@ -88,6 +89,7 @@ public class PlayerNeeds : MonoBehaviour, IDamagable
     // called when the player's health reaches 0
     public void Die()
     {
+        SceneManager.LoadScene("Menu");
         Debug.Log("Player is dead");
     }
 
