@@ -14,5 +14,19 @@
 * NPC enemy maximo character "Jolleen" with walking, running and attack animations.  
 * Most of the 3D models I have made myself, using nomad sculpt. However, I have composed the crafting table from different 3D models I found and put together in Paint 3D. 
 
+# To play game
+#### To open game 
+* Open zipfile
+* Go to TestBuild
+* Run TheIsland Application 
+#### Controls
+* To move: WASD
+* Jumping: Space
+* Open inventory: TAB
+* To equiping buildingkit: click right mouse control to open it (has to be in inventory) 
+* To save game: n 
+* To go back to menu: m 
+
+
 
 
