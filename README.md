@@ -1,5 +1,5 @@
 # TheIsland
-## [Link](https://www.youtube.com/watch?v=O-gg1tEAkzU&ab_channel=Annelindberg) to Youtube video demonstration (9 minutes)
+## [Link](https://www.youtube.com/watch?v=O-gg1tEAkzU&ab_channel=Annelindberg) to Youtube video demonstration (9 minutes) sorry for the sound at the beginning. 
 ---
 ## Third party sources and assets 
 #### Tutorials and inspiration to code 
@@ -23,7 +23,7 @@
 * To move: WASD
 * Jumping: Space
 * Open inventory: TAB
-* To equiping buildingkit: click right mouse control to open it (has to be in inventory) 
+* To equipping buildingkit: click right mouse control to open it (has to be in inventory) 
 * To save game: n 
 * To go back to menu: m 
 
